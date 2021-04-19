@@ -1,0 +1,58 @@
+package mypack;
+
+import java.util.Scanner;
+
+public class XeMay {
+    Scanner sc = new Scanner(System.in);
+    private int congSuat;
+    long giaBan;
+    public long phiTruocBa;
+
+    public XeMay(){}
+
+    public XeMay(int congSuat, long giaBan, long phiTruocBa){
+        this.congSuat = congSuat;
+        this.giaBan = giaBan;
+        this.phiTruocBa = phiTruocBa;
+    }
+
+    public int getCongSuat(){
+        return congSuat;
+    }
+
+
+    XeMay ( XeMay hang){
+        this.congSuat = hang.congSuat;
+        this.giaBan = hang.giaBan;
+    }
+    public void nhap(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("công suất xe: ");
+        congSuat = sc.nextInt();
+        System.out.println(" mời bạn nhập giá bán xe:");
+        giaBan = sc.nextLong();
+
+    }
+
+    public void setCongSuat(int i){
+        this.congSuat = congSuat;
+    }
+
+    public long getGiaBan(){
+        return ( giaBan + (5 * giaBan)/100 );
+    }
+
+    public long giaBan(){
+        return giaBan;
+    }
+
+    public long getPhiTruocBa(){
+        return congSuat +  giaBan();
+
+    }
+
+    public void xuat(){
+        System.out.println("phí trước ba của xe là: " + phiTruocBa);
+    }
+}
+

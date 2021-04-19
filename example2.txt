@@ -1,0 +1,21 @@
+package OOP;
+
+import mypack.XeMay;
+
+import java.util.Scanner;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        XeMay xe1 = new XeMay();
+
+     //   System.out.println(xe1);
+
+        xe1.nhap();
+        xe1.giaBan();
+        xe1.getPhiTruocBa();
+        xe1.xuat();
+
+    }
+}
+
